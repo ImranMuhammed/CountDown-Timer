@@ -1,7 +1,4 @@
 
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-
 * {
     box-sizing: border-box;
 }
@@ -32,6 +29,7 @@ h1 {
     display:flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .counter {
     font-weight: bold;
@@ -48,3 +46,4 @@ h1 {
 .countdown span {
     font-size: 1.6rem;
 }
+
