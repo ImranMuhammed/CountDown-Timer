@@ -5,10 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Countdown Timer</title>
         <link rel="stylesheet" href="style.css" />
-        <script src="./counter.js" defer></script>
     </head>
     <body>
-        <h1>New Years Eve</h1>
+        <h1 class="eventName" id="eventName">New Years Eve</h1>
 
         <div class="countDownContainer">
             <div class="countdown">
@@ -27,6 +26,16 @@
                 <p class="counter" id="seconds">00</p>
                 <span>Seconds</span>
             </div>
+            <form class="newEvent" id="newEvent">
+                <h3 id="newEvent">Change Event Details</h3>
+                <label class="formContent" for="event" >Event name:</label>
+                <input class="formContent" id="newEventName" type="text" placeholder="Event Name" name="eventName">
+                <label class="formContent" for="eventDate" >Event Date:</label>
+                <input class="formContent" id="newEventDate" type="date" placeholder="Event Date" name="eventDate">
+            <!-- <input type="submit" value="Start CountDown" id="newEventButton" class="newEventButton"> -->  
+                <button type="submit" id="newEventButton" class="newEventButton">Start CountDown</button>
+            </form>
         </div>
+        <script src="./counter.js" defer></script>
     </body>
 </html>

@@ -1,21 +1,32 @@
 
 
  var eventday="01/01/2021";
-
- function handleEventChange(){
-     var newEventday=prompt("Please eneter a new event date in format (dd/mm/yyyy)");
-     eventday=`"${newEventday}"`
+ const newEvent=document.getElementById("newEvent");
+ newEvent.addEventListener('submit',event=>{
+    event.preventDefault();
+    handleEventChange(event);  
+ })
+ 
+ function handleEventChange(event){
+    const eventName=event.target.elements.eventName.value;
+     const eventDate=event.target.elements.eventDate.value;
+     if((new Date(eventDate)-new Date())<0){
+         alert("Event date is alreasy passed. Please enter an upcoming event")
+     }
+     else if(eventName && eventDate){
+        eventday=eventDate;
+        document.getElementById("eventName").innerHTML=eventName;
+     }
+     else{
+         alert("Event name and Event date cannot be empty")
+     }
  }
+
 function countDown(){
    
     var eventDate=new Date(eventday);
     var currentDate=new Date();
     var totalSeconsds=(eventDate-currentDate)/1000;
-
-    if(totalSeconsds<0){
-        alert("Event had already passed. Please enter a upcoming event date");
-    }
-    else{
         var daysRemaining=Math.floor(totalSeconsds/3600/24);
         var hoursRemaining=Math.floor(totalSeconsds/3600)%24;
         var minutesRemaining=Math.floor(totalSeconsds/60)%60;
@@ -24,10 +35,7 @@ function countDown(){
         document.getElementById("days").innerHTML=dayCountFormat(daysRemaining);
         document.getElementById("hours").innerHTML=timeCountFormat(hoursRemaining);
         document.getElementById("minutes").innerHTML=timeCountFormat(minutesRemaining) ;
-        document.getElementById("seconds").innerHTML=timeCountFormat(seconsdsRemaining) ;
-    }
-    
-    
+        document.getElementById("seconds").innerHTML=timeCountFormat(seconsdsRemaining) ;  
 }
 
 function timeCountFormat(count){

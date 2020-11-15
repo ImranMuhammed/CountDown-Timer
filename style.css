@@ -34,9 +34,10 @@ h1 {
 .counter {
     font-weight: bold;
     font-size: 6rem;
-    margin: 1rem 3rem 3rem ;
+    margin: 1rem 2rem 2rem ;
     width: max-content;
-    background-color: rgba(0,0,0,0.3)
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10%;
 }
 
 .countdown {
@@ -47,3 +48,54 @@ h1 {
     font-size: 1.6rem;
 }
 
+.newEvent{
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 80px;
+    background-color:rgba(255,255,255,0.5);
+    color:blue;
+    font-weight: 600;
+    font-size: 20px;;
+    border-radius: 5%;
+
+}
+.formContent{
+    padding-bottom: 10px;
+    padding-top:10px;
+    margin:5px 5px 5px 5px;
+   
+}
+
+#newEventButton{
+    width:180px;
+    height: 40px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 5px;
+    border-radius:20%;
+    font-weight: bolder;
+    color: white;
+    font-size: 15px;
+    background-image: linear-gradient(to right,blue, gray);
+    cursor: pointer;    
+}
+
+#newEvent{
+    font-size: 25px;
+    color:blue;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.eventName{
+    position: relative;
+    right: 150px;
+    top:70px;
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 70px;
+}
